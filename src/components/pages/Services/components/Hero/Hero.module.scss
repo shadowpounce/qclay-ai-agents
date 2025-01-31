@@ -1,0 +1,42 @@
+.hero {
+    position: relative;
+    padding-bottom: 65px;
+    overflow: hidden;
+
+    @media screen and (max-width:767px) {
+        padding-bottom: 36px;
+    }
+}
+
+.hero__text {
+    position: relative;
+    z-index: 1;
+    max-width: 228px;
+    font-family: 'Neue Machina';
+    font-size: 21px;
+    line-height: 1.27;
+    color: var(--black-text-color);
+    margin-top: 225px;
+
+    span {
+        display: block;
+    }
+
+    @media screen and (max-width:767px) {
+        max-width: 180px;
+        font-size: 16px;
+        margin-top: 311px;
+    }
+}
+
+.hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media screen and (max-width:1320px) {
+        width: auto;
+        height: 100%;
+    }
+}
