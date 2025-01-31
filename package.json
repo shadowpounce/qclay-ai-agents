@@ -2,7 +2,6 @@
   "name": "project-qclay",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alex-main-academy.github.io/project-qclay-aI/",
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.2",
     "@react-spring/web": "^9.6.1",
