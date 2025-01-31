@@ -12,7 +12,7 @@ const Footer = () => {
             QClay AI
           </Link>
           <p className={css.footer__copy}>
-            All copyrights reserved ⓒ AI Qclay 2023
+            All copyrights reserved ⓒ AI Qclay 2025
           </p>
           <div className={css.footer__logos}>
             <a

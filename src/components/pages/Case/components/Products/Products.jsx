@@ -10,7 +10,7 @@ const Products = () => {
     <section className={css.products}>
       <div className="container">
         <div className={css.products__border}></div>
-        <p className={css.products__year}>2023</p>
+        <p className={css.products__year}>2025</p>
         <h2 className={css.products__title}>Case Title</h2>
         <div className={css.products__content}>
           <div className={css.products__top}>

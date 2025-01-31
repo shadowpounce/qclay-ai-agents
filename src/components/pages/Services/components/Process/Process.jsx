@@ -22,7 +22,7 @@ const Process = () => {
       <div className="container">
         <p className={css.process__uptitle}>About us</p>
         <h2 className={css.process__title}>
-        Agent AI development and customization takes only 1-3 days.
+          Agent AI development and customization takes only 1-3 days.
         </h2>
         <div className={css.process__border}></div>
         <p className={css.process__roadmap}>Roadmap</p>
@@ -47,8 +47,10 @@ const Process = () => {
                   query="(min-width:1124px)"
                   render={() => (
                     <p className={css.process__about}>
-                      We help you overcome the technical barrier with agent customization, which will take a ton of time and immersion in technical knowledge,
-                      we listen to your challenges, brainstorm what we can optimize or build for you.
+                      We help you overcome the technical barrier with agent
+                      customization, which will take a ton of time and immersion
+                      in technical knowledge, we listen to your challenges,
+                      brainstorm what we can optimize or build for you.
                     </p>
                   )}
                 />
@@ -58,8 +60,10 @@ const Process = () => {
                 query="(max-width:1123px)"
                 render={() => (
                   <p className={css.process__about}>
-                    We help you overcome the technical barrier with agent customization, which will take a ton of time and immersion in technical knowledge,
-                    we listen to your challenges, brainstorm what we can optimize or build for you.
+                    We help you overcome the technical barrier with agent
+                    customization, which will take a ton of time and immersion
+                    in technical knowledge, we listen to your challenges,
+                    brainstorm what we can optimize or build for you.
                   </p>
                 )}
               />
@@ -98,22 +102,32 @@ const Process = () => {
                 <p className={css.process__number}>
                   03<span>.</span>
                 </p>
-                <h3 className={css.process__subtitle}>Support and modernization</h3>
+                <h3 className={css.process__subtitle}>
+                  Support and modernization
+                </h3>
                 <Media
                   query="(min-width:1124px)"
                   render={() => (
                     <p className={css.process__about}>
-                      We support the agent, refine it if it stops working (for example, the structure of the project on which it was working has changed), develop it to be more functional and versatile.
+                      We support the agent, refine it if it stops working (for
+                      example, the structure of the project on which it was
+                      working has changed), develop it to be more functional and
+                      versatile.
                     </p>
                   )}
                 />
-                <p className={css.process__time}>Continuously (12 developer hours)</p>
+                <p className={css.process__time}>
+                  Continuously (12 developer hours)
+                </p>
               </div>
               <Media
                 query="(max-width:1123px)"
                 render={() => (
                   <p className={css.process__about}>
-                    We support the agent, refine it if it stops working (for example, the structure of the project on which it was working has changed), develop it to be more functional and versatile.
+                    We support the agent, refine it if it stops working (for
+                    example, the structure of the project on which it was
+                    working has changed), develop it to be more functional and
+                    versatile.
                   </p>
                 )}
               />
@@ -126,13 +140,14 @@ const Process = () => {
                   04<span>.</span>
                 </p>
                 <h3 className={css.process__subtitle}>
-                In touch with a dedicated manager
+                  In touch with a dedicated manager
                 </h3>
                 <Media
                   query="(min-width:1124px)"
                   render={() => (
                     <p className={css.process__about}>
-                      With whom you can discuss new automation ideas and pass feedback to the developers
+                      With whom you can discuss new automation ideas and pass
+                      feedback to the developers
                     </p>
                   )}
                 />
@@ -142,7 +157,8 @@ const Process = () => {
                 query="(max-width:1123px)"
                 render={() => (
                   <p className={css.process__about}>
-                    With whom you can discuss new automation ideas and pass feedback to the developers
+                    With whom you can discuss new automation ideas and pass
+                    feedback to the developers
                   </p>
                 )}
               />
@@ -151,10 +167,16 @@ const Process = () => {
         </ul>
         <div className={css.process__block}>
           <p className={css.process__agree}>
-          Contact us and we'll think together about how an agent could be of service to you
+            Contact us and we'll think together about how an agent could be of
+            service to you
           </p>
           <div className={css.process__contact}>
             <motion.a
+              onClick={() =>
+                document
+                  .querySelector('#contact-us')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
               initial="initial"
               whileHover="hover"
               variants={hoverEffectAnimation}

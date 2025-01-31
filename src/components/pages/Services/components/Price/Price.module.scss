@@ -138,7 +138,7 @@
     border: 1px solid #000000;
     border-radius: 60px;
 
-    margin: 0 auto 35px auto;
+    margin: auto auto 35px auto;
 
     transition-property: border-color;
     transition-duration: 750ms;
@@ -159,6 +159,7 @@
     letter-spacing: -0.04em;
     text-transform: uppercase;
     margin-bottom: 50px;
+    display: none;
 
     @media screen and (max-width:767px) {
         font-size: 38px;
@@ -175,6 +176,7 @@
     padding: 35px 0;
     background-color: #00B582;
     border-radius: 120px;
+    // margin-top: auto;
 
     transition-duration: 750ms;
 

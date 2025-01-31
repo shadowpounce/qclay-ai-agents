@@ -30,28 +30,55 @@ const Header = () => {
               <>
                 <ul className={css.navigation}>
                   <li className={css.navigation__item}>
-                    <Link to="/" className={css.navigation__link}>
+                    <a
+                      onClick={ev => {
+                        ev.preventDefault();
+                        document
+                          .querySelector('#services')
+                          .scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      href="#services"
+                      className={css.navigation__link}
+                    >
                       Services
-                    </Link>
+                    </a>
                   </li>
+
                   <li className={css.navigation__item}>
-                    <Link to="/cases" className={css.navigation__link}>
-                      Cases
-                    </Link>
-                  </li>
-                  <li className={css.navigation__item}>
-                    <Link to="/blog" className={css.navigation__link}>
+                    <a
+                      onClick={ev => {
+                        ev.preventDefault(0);
+                        document
+                          .querySelector('#about-us')
+                          .scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      href="#about-us"
+                      className={css.navigation__link}
+                    >
                       About
-                    </Link>
+                    </a>
                   </li>
-                  <li className={css.navigation__item}>
-                    <Link to="/case" className={css.navigation__link}>
+                  <li
+                    onClick={ev => {
+                      ev.preventDefault();
+                      document
+                        .querySelector('#contact-us')
+                        .scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className={css.navigation__item}
+                  >
+                    <a href="#contact-us" className={css.navigation__link}>
                       Contacts
-                    </Link>
+                    </a>
                   </li>
                 </ul>
                 <div className={css.header__button}>
                   <motion.button
+                    onClick={() =>
+                      document
+                        .querySelector('#contact-us')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    }
                     initial="initial"
                     whileHover="hover"
                     variants={hoverEffectAnimation}

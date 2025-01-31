@@ -3,6 +3,19 @@ import css from './Contact.module.scss';
 import sprite from '../../images/sprite.svg';
 import cardImage from '../../images/contact/card.png';
 import Media from 'react-media';
+import { useState } from 'react';
+import axios from 'axios';
+
+const TELEGRAM_BOT_TOKEN = '8090435868:AAEr7FxQm0g5jxYR0KNXtEGSup4hrDKYz5o';
+const TELEGRAM_CHAT_ID = '-4661685507';
+
+function sendMessage(text) {
+  return axios.post(
+    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?parse_mode=HTML&chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(
+      text
+    )}`
+  );
+}
 
 const borderAnimation = {
   hidden: {
@@ -69,8 +82,14 @@ const hoverEffectAnimation = {
 };
 
 const Contact = () => {
+  const [data, setData] = useState({
+    name: '',
+    email: '',
+    desc: '',
+  });
+
   return (
-    <section className={css.contact}>
+    <section id="contact-us" className={css.contact}>
       <div className="container">
         <motion.h2
           initial="hidden"
@@ -86,7 +105,18 @@ const Contact = () => {
           variants={borderAnimation}
           className={css.contact__border}
         ></motion.div>
-        <form className={css.contact__form}>
+        <form
+          onSubmit={ev => {
+            ev.preventDefault();
+            sendMessage(
+              '<b>QClay Ai Agents</b>\n\n' +
+                `<b>Name</b>: ${data.name}\n` +
+                `<b>Email</b>: ${data.email}\n` +
+                `<b>Project description</b>: ${data.desc}\n`
+            );
+          }}
+          className={css.contact__form}
+        >
           <div className={css.form__top}>
             <div>
               <label className={css.form__label}>
@@ -94,6 +124,8 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
+                  value={data.name}
+                  onChange={e => setData({ ...data, name: e.target.value })}
                   placeholder="Alexandro Ramirez"
                   className={css.form__name}
                 />
@@ -103,6 +135,8 @@ const Contact = () => {
               <label className={css.form__label}>
                 <span>Your email</span>
                 <input
+                  value={data.email}
+                  onChange={e => setData({ ...data, email: e.target.value })}
                   type="email"
                   name="email"
                   placeholder="alexandro@gmail.com"
@@ -111,10 +145,12 @@ const Contact = () => {
               </label>
             </div>
           </div>
-        
+
           <label className={css.form__label}>
             <span>Project Description</span>
             <input
+              value={data.description}
+              onChange={e => setData({ ...data, desc: e.target.value })}
               type="text"
               name="project"
               placeholder="Describe what you would like to automate."

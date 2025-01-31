@@ -86,6 +86,7 @@
     width: calc(100% - 728px);
     padding-bottom: 95px;
     margin-left: auto;
+    text-align: left !important;
 
     @media screen and (max-width:1123px) {
         width: 100%;
@@ -110,9 +111,7 @@
         color: #0000005E;
     }
 
-    &:nth-child(2) {
-        margin-left: 110px;
-    }
+  
 
     @media screen and (max-width:1480px) {
         font-size: 40px;

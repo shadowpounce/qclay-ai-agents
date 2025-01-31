@@ -14,7 +14,7 @@ const borderAnimation = {
 
 const Price = () => {
   return (
-    <section className={css.price}>
+    <section id="prices" className={css.price}>
       <div className="container">
         <h2 className={css.price__title}>
           Our <span>prices</span> for development, modernization and support of

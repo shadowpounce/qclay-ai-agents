@@ -26,7 +26,7 @@ const Services = () => {
         <Results />
         <Impact />
         {/* <Cases /> */}
-        <Team />
+        {/* <Team /> */}
         {/* <Blog /> */}
         <Price />
         <Contact />
