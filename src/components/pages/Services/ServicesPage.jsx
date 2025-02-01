@@ -21,7 +21,7 @@ const Services = () => {
       const sections = document.querySelectorAll('main > *');
 
       sections.forEach(section => {
-        const initH = section.querySelector('.container').offsetHeight;
+        const initH = section.lastChild.offsetHeight;
         section.style.height =
           initH *
             (Number(section.dataset.kf) ? Number(section.dataset.kf) : 0.85) +
@@ -32,7 +32,7 @@ const Services = () => {
 
   return (
     <>
-      <Header />
+      <Header hideMenu={true} />
       <main>
         <Hero />
         <Science />

@@ -40,7 +40,7 @@ const Results = () => {
   });
 
   return (
-    <section data-kf="0.825" className={css.results}>
+    <section data-kf="0.75" className={css.results}>
       <div className="container">
         <div className={css.results__block}>
           <div className={css.results__beneficial}>
@@ -67,7 +67,7 @@ const Results = () => {
                     muted
                     loop
                     playsInline
-                    controls="false"
+                    controls={false}
                     className={css.results__laptop}
                   >
                     <source src={laptopVideo} />
@@ -83,7 +83,7 @@ const Results = () => {
               query="(max-width:1123px)"
               render={() => (
                 <video
-                  controls="false"
+                  controls={false}
                   autoPlay
                   muted
                   loop

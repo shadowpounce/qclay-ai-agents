@@ -185,6 +185,13 @@
   margin-top: auto;
 
   transition-duration: 750ms;
+  font-weight: 700;
+
+  span {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+  }
 
   @media screen and (max-width: 767px) {
     padding: 26px 0;

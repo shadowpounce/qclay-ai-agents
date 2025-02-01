@@ -18,7 +18,7 @@ const hoverEffectAnimation = {
 
 const Process = () => {
   return (
-    <section data-kf="0.8" className={css.process}>
+    <section data-kf="0.7" className={css.process}>
       <div className="container">
         <p className={css.process__uptitle}>About us</p>
         <h2 className={css.process__title}>

@@ -4,6 +4,7 @@ import Media from 'react-media';
 import css from './Header.module.scss';
 import logo from '../../images/header/logo.png';
 import sprite from '../../images/sprite.svg';
+import clsx from 'clsx';
 
 const hoverEffectAnimation = {
   initial: {
@@ -15,80 +16,106 @@ const hoverEffectAnimation = {
   },
 };
 
-const Header = () => {
+const Header = ({
+  hideMenu = false,
+  onlyMenu = false,
+  staticHeader = false,
+}) => {
   return (
-    <header className={css.header}>
+    <header
+      className={clsx(css.header, { [css.header__static]: staticHeader })}
+    >
       <div className="container">
         <div className={css.header__container}>
-          <Link to="/" className={css.header__logo}>
-            <img src={logo} alt="logo" width="54" />
-            QClay AI
-          </Link>
+          {!onlyMenu && (
+            <Link to="/" className={css.header__logo}>
+              <img src={logo} alt="logo" width="54" />
+              QClay AI
+            </Link>
+          )}
           <Media
             query="(min-width:1124px)"
             render={() => (
               <>
-                <ul className={css.navigation}>
-                  <li className={css.navigation__item}>
-                    <a
+                {!hideMenu && (
+                  <ul className={css.navigation}>
+                    <li className={css.navigation__item}>
+                      <a
+                        onClick={ev => {
+                          ev.preventDefault();
+                          document
+                            .querySelector('#services')
+                            .scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        href="#services"
+                        className={css.navigation__link}
+                      >
+                        Services
+                      </a>
+                    </li>
+
+                    <li className={css.navigation__item}>
+                      <a
+                        onClick={ev => {
+                          ev.preventDefault(0);
+                          document
+                            .querySelector('#prices')
+                            .scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        href="#prices"
+                        className={css.navigation__link}
+                      >
+                        Price
+                      </a>
+                    </li>
+                    <li className={css.navigation__item}>
+                      <a
+                        onClick={ev => {
+                          ev.preventDefault(0);
+                          document
+                            .querySelector('#about-us')
+                            .scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        href="#about-us"
+                        className={css.navigation__link}
+                      >
+                        About
+                      </a>
+                    </li>
+                    <li
                       onClick={ev => {
                         ev.preventDefault();
                         document
-                          .querySelector('#services')
+                          .querySelector('#contact-us')
                           .scrollIntoView({ behavior: 'smooth' });
                       }}
-                      href="#services"
-                      className={css.navigation__link}
+                      className={css.navigation__item}
                     >
-                      Services
-                    </a>
-                  </li>
-
-                  <li className={css.navigation__item}>
-                    <a
-                      onClick={ev => {
-                        ev.preventDefault(0);
+                      <a href="#contact-us" className={css.navigation__link}>
+                        Contacts
+                      </a>
+                    </li>
+                  </ul>
+                )}
+                {!onlyMenu && (
+                  <div className={css.header__button}>
+                    <motion.button
+                      onClick={() =>
                         document
-                          .querySelector('#about-us')
-                          .scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      href="#about-us"
-                      className={css.navigation__link}
+                          .querySelector('#contact-us')
+                          .scrollIntoView({ behavior: 'smooth' })
+                      }
+                      initial="initial"
+                      whileHover="hover"
+                      variants={hoverEffectAnimation}
+                      type="button"
+                      className={css.header__quote}
                     >
-                      About
-                    </a>
-                  </li>
-                  <li
-                    onClick={ev => {
-                      ev.preventDefault();
-                      document
-                        .querySelector('#contact-us')
-                        .scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className={css.navigation__item}
-                  >
-                    <a href="#contact-us" className={css.navigation__link}>
-                      Contacts
-                    </a>
-                  </li>
-                </ul>
-                <div className={css.header__button}>
-                  <motion.button
-                    onClick={() =>
-                      document
-                        .querySelector('#contact-us')
-                        .scrollIntoView({ behavior: 'smooth' })
-                    }
-                    initial="initial"
-                    whileHover="hover"
-                    variants={hoverEffectAnimation}
-                    type="button"
-                    className={css.header__quote}
-                  >
-                    <span className={css.white__span}>Get Quote</span>
-                    <span className={css.black__span}>Get Quote</span>
-                  </motion.button>
-                </div>
+                      <span className={css.white__span}>Get Quote</span>
+                      <span className={css.black__span}>Get Quote</span>
+                    </motion.button>
+                  </div>
+                )}
               </>
             )}
           />

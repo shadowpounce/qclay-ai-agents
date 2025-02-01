@@ -22,10 +22,14 @@ p {
   margin: 0 auto;
   padding: 0 10px;
   overflow: hidden;
+  width: 100%;
 
   @media (min-width: 1001px) {
     scale: 0.7;
     transform-origin: top center;
+    max-width: 120%;
+    width: 120%;
+    translate: -10% 0;
   }
 
   @media (min-width: 1001px) and (max-width: 1536px) {
@@ -50,6 +54,10 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+
+  @media (min-width: 1001px) {
+    translate: 0 20%;
+  }
 }
 
 .word {

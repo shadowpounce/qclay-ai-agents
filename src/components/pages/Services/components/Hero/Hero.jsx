@@ -17,7 +17,22 @@ const textAnimation = {
 
 const Hero = () => {
   return (
-    <motion.section initial="hidden" whileInView="visible" className={css.hero}>
+    <motion.section
+      data-kf="1"
+      initial="hidden"
+      whileInView="visible"
+      className={css.hero}
+    >
+      <div
+        style={{
+          position: `relative`,
+          zIndex: 10,
+          translate: `0 -100%`,
+        }}
+      >
+        <Header staticHeader={true} onlyMenu={true} />
+      </div>
+
       <div
         dangerouslySetInnerHTML={{
           __html: `<video playsinline webkit-playsinline autoplay muted loop class="hero__video">
@@ -36,9 +51,9 @@ const Hero = () => {
           <motion.span variants={textAnimation} custom={3}>
             teach you how to use, modernize and support your agent.
           </motion.span>
-          <motion.span variants={textAnimation} custom={4}>
+          {/* <motion.span variants={textAnimation} custom={4}>
             Based on: Operator OpenAI, Claude AI, UI Tars, Deepseek and others.
-          </motion.span>
+          </motion.span> */}
         </motion.p>
       </div>
     </motion.section>

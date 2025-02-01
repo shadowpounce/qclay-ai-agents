@@ -45,7 +45,7 @@ const Price = () => {
               }
               className={css.card__estimated}
             >
-              $49/month/(one year contract)
+              $49/month/<span>(one year contract)</span>
             </p>
           </li>
           <li className={css.price__card}>
@@ -68,7 +68,7 @@ const Price = () => {
               }
               className={css.card__estimated}
             >
-              $129/month/(one year subscription).
+              $129/month/ <span>(one year subscription)</span> .
             </p>
           </li>
           <li className={css.price__card}>

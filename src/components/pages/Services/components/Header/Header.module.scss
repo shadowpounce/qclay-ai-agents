@@ -6,6 +6,12 @@
   z-index: 1111;
   padding-block: 12px;
 
+  &.header__static {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 767px) {
     // padding-block: 1212px;
 
@@ -20,10 +26,10 @@
   justify-content: space-between;
   align-items: center;
 
-  background: rgb(0 181 130 / 70%);
-  padding: 12px 6px 12px 12px;
-  border-radius: 56px;
-  backdrop-filter: blur(20px);
+  //   background: rgb(0 181 130 / 70%);
+  //   padding: 12px 6px 12px 12px;
+  //   border-radius: 56px;
+  //   backdrop-filter: blur(20px);
 
   @media (max-width: 768px) {
     padding-inline: 12px;
@@ -38,7 +44,9 @@
   font-family: 'Power Grotesk';
   font-size: 29.7px;
   line-height: 1.2;
-  color: var(--black-text-color);
+  //   color: var(--black-text-color);
+  color: #fff;
+  filter: drop-shadow(2px 2px 2px black);
 }
 
 .navigation {
@@ -74,6 +82,8 @@
   line-height: 0.95;
   color: var(--black-text-color);
   cursor: pointer;
+
+  border: 2px solid black;
 
   span {
     display: block;

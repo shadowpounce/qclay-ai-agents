@@ -1,126 +1,122 @@
 .service {
-    padding: 38.5px 0 0 0;
-    background-color: #FFFFFF;
+  padding: 38.5px 0 0 0;
+  background-color: #ffffff;
 
-    @media screen and (max-width:767px) {
-        padding: 43px 0 0 0;
-    }
+  @media screen and (max-width: 767px) {
+    padding: 43px 0 0 0;
+  }
 }
 
 .service__title {
-    position: relative;
+  position: relative;
 
-    font-size: 80px;
-    line-height: 1.28;
-    text-transform: uppercase;
-    color: var(--black-text-color);
+  font-size: 80px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  color: var(--black-text-color);
+
+  span {
+    position: absolute;
+    top: 10px;
+    left: 334px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 75px;
+    background-color: #00b582;
+    border-radius: 79px;
+    color: var(--white-text-color);
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 50px;
+    line-height: 0.8;
 
     span {
-        position: absolute;
-        top: 10px;
-        left: 334px;
+      top: 0;
+      left: 207px;
+      width: 59px;
+      height: 40px;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 110px;
-        height: 75px;
-        background-color: #00B582;
-        border-radius: 79px;
-        color: var(--white-text-color);
+      svg {
+        width: 17px;
+        height: 12px;
+      }
     }
-
-    @media screen and (max-width:767px) {
-        font-size: 50px;
-        line-height: 0.8;
-
-        span {
-            top: 0;
-            left: 207px;
-            width: 59px;
-            height: 40px;
-
-            svg {
-                width: 17px;
-                height: 12px;
-            }
-        }
-    }
+  }
 }
 
 .service__block {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 38px;
-    margin-top: 44.5px;
-    padding-bottom: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  margin-top: 44.5px;
+  padding-bottom: 2px;
 
-    @media screen and (max-width:1123px) {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
+  @media screen and (max-width: 1123px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 
-    @media screen and (max-width:767px) {
-        margin-top: 63.75px;
-    }
+  @media screen and (max-width: 767px) {
+    margin-top: 63.75px;
+  }
 }
 
 .service__list {
-    align-self: flex-end;
-    position: relative;
-    height: 290px;
-    width: 690px;
+  align-self: flex-end;
+  position: relative;
+  height: 290px;
+  width: 690px;
 
-    @media screen and (max-width:1123px) {
-        align-self: flex-start;
-    }
+  @media screen and (max-width: 1123px) {
+    align-self: flex-start;
+  }
 
-    @media screen and (max-width:767px) {
-        width: 100%;
-        height: 172px;
-    }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 172px;
+  }
 }
 
 .features {
-    width: calc(100% - 728px);
-    padding-bottom: 95px;
-    margin-left: auto;
-    text-align: left !important;
+  width: 45%;
+  padding-bottom: 95px;
+  margin-left: auto;
+  text-align: left !important;
 
-    @media screen and (max-width:1123px) {
-        width: 100%;
-        padding-bottom: 300px;
-    }
+  @media screen and (max-width: 1123px) {
+    width: 100%;
+    padding-bottom: 300px;
+  }
 
-    @media screen and (max-width:767px) {
-        padding-bottom: 268.5px;
-    }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 268.5px;
+  }
 }
 
 // features
 
 .features__item {
-    font-family: 'Neue Machina';
-    font-size: 66px;
-    line-height: 1.07;
-    text-transform: uppercase;
-    color: var(--black-text-color);
+  font-family: 'Neue Machina';
+  font-size: 66px;
+  line-height: 1.07;
+  text-transform: uppercase;
+  color: var(--black-text-color);
 
-    span {
-        color: #0000005E;
-    }
+  span {
+    color: #0000005e;
+  }
 
-  
+  @media screen and (max-width: 1480px) {
+    font-size: 40px;
+  }
 
-    @media screen and (max-width:1480px) {
-        font-size: 40px;
-    }
-
-    @media screen and (max-width:767px) {
-        font-size: 30px;
-        line-height: 0.92;
-
-      
-    }
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+    line-height: 0.92;
+  }
 }
