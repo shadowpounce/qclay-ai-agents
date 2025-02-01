@@ -22,10 +22,13 @@ p {
   margin: 0 auto;
   padding: 0 10px;
   overflow: hidden;
-  scale: 0.7;
-  transform-origin: top center;
 
-  @media (max-width: 1536px) {
+  @media (min-width: 1001px) {
+    scale: 0.7;
+    transform-origin: top center;
+  }
+
+  @media (min-width: 1001px) and (max-width: 1536px) {
     scale: 0.7;
     max-width: 100% !important;
   }
