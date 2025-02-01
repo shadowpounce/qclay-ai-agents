@@ -5,12 +5,12 @@ import tennisMobileVideo from '../../video/tennis-mob.mp4';
 
 const Impact = () => {
   return (
-    <section className={css.impact}>
+    <section data-kf="0.65" className={css.impact}>
       <div className="container">
         <p className={css.impact__uptitle}>AI Technology</p>
         <h2 className={css.impact__title}>
-          The impact of AI Agents on the world is far-reaching and profound, changing
-          the way we live, work, and interact.
+          The impact of AI Agents on the world is far-reaching and profound,
+          changing the way we live, work, and interact.
         </h2>
         <video autoPlay muted loop className={css.impact__video}>
           <source src={tennisVideo} />

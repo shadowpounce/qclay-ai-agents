@@ -13,8 +13,20 @@ import Science from './components/Science/Science';
 import Service from './components/Service/Service';
 import Team from './components/Team/Team';
 import Header from './components/Header/Header';
+import { useEffect } from 'react';
 
 const Services = () => {
+  useEffect(() => {
+    const sections = document.querySelectorAll('main > *');
+
+    sections.forEach(section => {
+      const initH = section.querySelector('.container').offsetHeight;
+      section.style.height =
+        initH * (Number(section.dataset.kf) ? Number(section.dataset.kf) : 0.85) +
+        'px';
+    });
+  }, []);
+
   return (
     <>
       <Header />

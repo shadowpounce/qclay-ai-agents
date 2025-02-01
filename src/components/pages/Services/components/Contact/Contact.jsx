@@ -89,7 +89,7 @@ const Contact = () => {
   });
 
   return (
-    <section id="contact-us" className={css.contact}>
+    <section data-kf="0.6" id="contact-us" className={css.contact}>
       <div className="container">
         <motion.h2
           initial="hidden"
