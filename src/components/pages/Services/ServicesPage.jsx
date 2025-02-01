@@ -12,10 +12,12 @@ import Results from './components/Results/Results';
 import Science from './components/Science/Science';
 import Service from './components/Service/Service';
 import Team from './components/Team/Team';
+import Header from './components/Header/Header';
 
 const Services = () => {
   return (
     <>
+      <Header />
       <main>
         <Hero />
         <Science />

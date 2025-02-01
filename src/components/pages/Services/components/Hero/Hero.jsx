@@ -25,20 +25,19 @@ const Hero = () => {
         </video>`,
         }}
       />
-      <Header />
       <div className="container">
         <motion.p className={css.hero__text}>
           <motion.span variants={textAnimation} custom={1}>
-            The power of Data
+            We create personal AI agents,
           </motion.span>
           <motion.span variants={textAnimation} custom={2}>
-            Analysis & Software
+            help you automate your routine, optimize a lot of your time,
           </motion.span>
           <motion.span variants={textAnimation} custom={3}>
-            Development
+            teach you how to use, modernize and support your agent.
           </motion.span>
           <motion.span variants={textAnimation} custom={4}>
-            Combined
+            Based on: Operator OpenAI, Claude AI, UI Tars, Deepseek and others.
           </motion.span>
         </motion.p>
       </div>

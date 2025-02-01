@@ -69,8 +69,9 @@ const Science = () => {
             variants={textAnimation}
             className={css.science__title}
           >
-            AI agent development company, for people and businesses. Only from
-            $49/month
+            <span>AI agent</span> development company, for people and
+            businesses. Only from
+            <span> $49</span>/month
             <img
               src={titleIcon}
               alt="icon"
@@ -190,7 +191,7 @@ const Science = () => {
               >
                 <Link className={css.science__link}>
                   <svg
-                   className={css.science__icon}
+                    className={css.science__icon}
                     xmlns="http://www.w3.org/2000/svg"
                     shape-rendering="geometricPrecision"
                     text-rendering="geometricPrecision"

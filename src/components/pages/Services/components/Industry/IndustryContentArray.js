@@ -1,7 +1,7 @@
 const industryContentArray = [
   {
     id: '1',
-    title: 'Advancement',
+    title: 'Marketing',
     content: [
       'You can promote accounts in social networks, promote websites in SEO',
     ],

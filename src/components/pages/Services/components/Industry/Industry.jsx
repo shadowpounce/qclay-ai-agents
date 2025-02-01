@@ -36,13 +36,22 @@ const Industry = () => {
       <div className="container">
         <p className={css.industry__uptitle}>Applications</p>
         <h2 className={css.industry__title}>
-        Where AI agents are already replacing humans
+          Where AI agents are already replacing humans
         </h2>
         <div className={css.industry__block}>
           <ul className={css.industry__list}>
             {industryContentArray.map(({ title, content, id }) => {
               return (
                 <li
+                  onClick={ev => {
+                    if (
+                      ev.target.closest('li').classList.contains(css.active)
+                    ) {
+                      ev.target.closest('li').classList.remove(css.active);
+                    } else {
+                      ev.target.closest('li').classList.add(css.active);
+                    }
+                  }}
                   className={css.industry__item}
                   key={id}
                   onMouseEnter={handleToggleAnimation}

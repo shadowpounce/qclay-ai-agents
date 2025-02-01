@@ -178,6 +178,8 @@
 
     @media screen and (max-width:767px) {
         padding: 0;
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
@@ -226,6 +228,7 @@
 
     @media screen and (max-width:1123px) {
         height: auto;
+        padding-top: 20px !important;
     }
 }
 
@@ -284,7 +287,8 @@
     @media screen and (max-width:767px) {
         font-size: 12px;
         line-height: 1.08;
-        max-width: 131px;
+        max-width: 100%;
+
     }
 }
 

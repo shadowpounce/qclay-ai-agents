@@ -27,6 +27,10 @@
   text-transform: uppercase;
   color: var(--white-text-color);
 
+  span {
+    color: var(--accent-text-color);
+  }
+
   @media screen and (max-width: 767px) {
     font-size: 50px;
   }

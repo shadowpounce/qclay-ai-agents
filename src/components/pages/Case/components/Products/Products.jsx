@@ -16,7 +16,7 @@ const Products = () => {
           <div className={css.products__top}>
             <div className={css.products__info}>
               <h3 className={css.products__subtitle}>
-                DIFFICULTIES OF PUBLISHING <span>PRODUCTS ON Qclay AI</span>
+                DIFFICULTIES OF PUBLISHING <span>PRODUCTS ON QClay AI</span>
               </h3>
               <p className={css.products__text}>
                 Lorem ipsum dolor sit amet consectetur. Eu elit ut leo dui dolor

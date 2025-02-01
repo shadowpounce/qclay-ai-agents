@@ -37,7 +37,16 @@ const Price = () => {
             </p>
             <p className={css.card__accept}>We accept both, fiat and crypto</p>
             <p className={css.card__weeks}>2 weeks</p>
-            <p className={css.card__estimated}>$49/month/(one year contract)</p>
+            <p
+              onClick={() =>
+                document
+                  .querySelector('#contact-us')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
+              className={css.card__estimated}
+            >
+              $49/month/(one year contract)
+            </p>
           </li>
           <li className={css.price__card}>
             <p className={css.card__sharp}>#2</p>
@@ -51,7 +60,14 @@ const Price = () => {
             </p>
             <p className={css.card__accept}>We accept both, fiat and crypto</p>
             <p className={css.card__weeks}>2 weeks</p>
-            <p className={css.card__estimated}>
+            <p
+              onClick={() =>
+                document
+                  .querySelector('#contact-us')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
+              className={css.card__estimated}
+            >
               $129/month/(one year subscription).
             </p>
           </li>
@@ -67,7 +83,16 @@ const Price = () => {
             </p>
             <p className={css.card__accept}>We accept both, fiat and crypto</p>
             <p className={css.card__weeks}>2 weeks</p>
-            <p className={css.card__estimated}>Let's talk</p>
+            <p
+              onClick={() =>
+                document
+                  .querySelector('#contact-us')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
+              className={css.card__estimated}
+            >
+              Let's talk
+            </p>
           </li>
         </ul>
         <Media

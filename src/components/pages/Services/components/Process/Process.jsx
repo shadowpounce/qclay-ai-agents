@@ -25,7 +25,7 @@ const Process = () => {
           Agent AI development and customization takes only 1-3 days.
         </h2>
         <div className={css.process__border}></div>
-        <p className={css.process__roadmap}>Roadmap</p>
+        <p className={css.process__roadmap}>Steps</p>
         <ul className={css.process__list}>
           <li className={css.process__roadmap__item}>
             <Player

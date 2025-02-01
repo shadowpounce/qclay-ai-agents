@@ -63,19 +63,27 @@ const Results = () => {
                 <Media
                   query="(min-width:1123px)"
                   render={() => (
-                    <video autoPlay muted loop className={css.results__laptop}>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      controls="false"
+                      className={css.results__laptop}
+                    >
                       <source src={laptopVideo} />
                     </video>
                   )}
                 />
                 <p className={css.results__text}>
-                Our team of 270 developers, data scientists, administrators managers 
+                  Our team of 270 developers, data scientists, administrators
+                  managers
                 </p>
               </div>
               <Media
                 query="(max-width:1123px)"
                 render={() => (
-                  <video autoPlay muted loop className={css.results__laptop}>
+                  <video controls="false" autoPlay muted loop className={css.results__laptop}>
                     <source src={laptopVideo} />
                   </video>
                 )}
@@ -83,20 +91,16 @@ const Results = () => {
             </div>
             <div className={css.results__last}>
               <div className={css.results__top}>
-                        <p className={css.results__sum}>
-                          +3100
-                        </p>
+                <p className={css.results__sum}>+3100</p>
                 <p className={css.results__text}>
-                We provide support for over 3,000 ai agents.
+                  We provide support for over 3,000 ai agents.
                 </p>
               </div>
               <div className={css.results__bottom}>
-                        <p className={css.results__sum}>
-                          X10
-                        </p>
+                <p className={css.results__sum}>X10</p>
                 <p className={css.results__text}>
-                You spend 80% less time, but get dozens of times more results”
-                leads, target audience grow, more data is processed
+                  You spend 80% less time, but get dozens of times more results”
+                  leads, target audience grow, more data is processed
                 </p>
               </div>
             </div>
