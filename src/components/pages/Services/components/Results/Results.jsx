@@ -40,7 +40,7 @@ const Results = () => {
   });
 
   return (
-    <section data-kf="0.75" className={css.results}>
+    <section data-color="white" data-kf="0.75" className={css.results}>
       <div className="container">
         <div className={css.results__block}>
           <div className={css.results__beneficial}>

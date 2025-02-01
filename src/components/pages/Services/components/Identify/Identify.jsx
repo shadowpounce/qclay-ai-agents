@@ -35,7 +35,7 @@ const parAnimation = {
 
 const Identify = () => {
   return (
-    <section id="about-us" className={css.identify}>
+    <section data-color='black' id="about-us" className={css.identify}>
       <div className="container">
         <motion.p
           initial="hidden"

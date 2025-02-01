@@ -156,7 +156,7 @@ const Service = () => {
   ];
 
   return (
-    <section data-kf="0.8" id="services" ref={ref} className="service">
+    <section data-color='white' data-kf="0.8" id="services" ref={ref} className="service">
       <div className="container">
         <h2 className={css.service__title}>
           Services

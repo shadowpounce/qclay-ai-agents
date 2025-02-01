@@ -59,7 +59,7 @@ const hoverEffectAnimation = {
 
 const Science = () => {
   return (
-    <section data-kf="0.7" className={css.science}>
+    <section data-color='black' data-kf="0.7" className={css.science}>
       <div className="container">
         <div className={css.science__top}>
           <motion.h2

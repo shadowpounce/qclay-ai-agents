@@ -5,6 +5,7 @@ import css from './Header.module.scss';
 import logo from '../../images/header/logo.png';
 import sprite from '../../images/sprite.svg';
 import clsx from 'clsx';
+import { useEffect, useRef } from 'react';
 
 const hoverEffectAnimation = {
   initial: {
@@ -21,6 +22,45 @@ const Header = ({
   onlyMenu = false,
   staticHeader = false,
 }) => {
+  const logoRef = useRef(null);
+
+  useEffect(() => {
+    if (logoRef.current) {
+      const sections = document.querySelectorAll('section');
+
+      window.addEventListener('scroll', () => {
+        let windowHeight = window.innerHeight;
+
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const color = section.dataset.color;
+
+          console.log(rect.top);
+
+          // Проверяем, когда секция почти полностью заполняет экран
+          if (
+            rect.top < windowHeight * 0.25 &&
+            rect.bottom > windowHeight * 0.25
+          ) {
+            switch (color) {
+              case 'black':
+                logoRef.current.className = `${css.header__logo}`;
+                logoRef.current.classList.add(`${css.black}`);
+                break;
+              case 'white':
+                logoRef.current.className = `${css.header__logo}`;
+                logoRef.current.classList.add(`${css.white}`);
+                break;
+              default:
+                logoRef.current.className = `${css.header__logo}`;
+                break;
+            }
+          }
+        });
+      });
+    }
+  }, []);
+
   return (
     <header
       className={clsx(css.header, { [css.header__static]: staticHeader })}
@@ -28,7 +68,7 @@ const Header = ({
       <div className="container">
         <div className={css.header__container}>
           {!onlyMenu && (
-            <Link to="/" className={css.header__logo}>
+            <Link ref={logoRef} to="/" className={css.header__logo}>
               <img src={logo} alt="logo" width="54" />
               QClay AI
             </Link>
@@ -120,15 +160,25 @@ const Header = ({
             )}
           />
           <Media
-            query="(max-width:1123px)"
+            query="(max-width:1000px)"
             render={() => (
-              <svg
-                width="29.8"
-                height="18.4"
-                className={css.header__burger__icon}
-              >
-                <use href={sprite + '#icon-burger'}></use>
-              </svg>
+              <div className={css.header__button}>
+                <motion.button
+                  onClick={() =>
+                    document
+                      .querySelector('#contact-us')
+                      .scrollIntoView({ behavior: 'smooth' })
+                  }
+                  initial="initial"
+                  whileHover="hover"
+                  variants={hoverEffectAnimation}
+                  type="button"
+                  className={css.header__quote}
+                >
+                  <span className={css.white__span}>Get Quote</span>
+                  <span className={css.black__span}>Get Quote</span>
+                </motion.button>
+              </div>
             )}
           />
         </div>

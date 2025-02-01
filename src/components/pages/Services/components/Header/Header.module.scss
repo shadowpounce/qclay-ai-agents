@@ -10,6 +10,10 @@
     position: relative;
     width: fit-content;
     margin: 0 auto;
+
+    @media (max-width: 769px) {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -41,12 +45,31 @@
   align-items: center;
   gap: 12px;
 
+  &.black {
+    color: #fff !important;
+  }
+
+  &.white {
+    color: var(--black-text-color) !important;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
   font-family: 'Power Grotesk';
   font-size: 29.7px;
   line-height: 1.2;
-  //   color: var(--black-text-color);
-  color: #fff;
-  filter: drop-shadow(2px 2px 2px black);
+  color: var(--black-text-color);
+
+  transition: color 0.4s ease;
+
+  img {
+    transition: filter 0.4s ease;
+  }
+
+  // color: #fff;
+  // filter: drop-shadow(2px 2px 2px black);
 }
 
 .navigation {
@@ -68,6 +91,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    transform-origin: right center;
+    width: 150px;
+    scale: 0.85;
+  }
 }
 
 .header__quote {

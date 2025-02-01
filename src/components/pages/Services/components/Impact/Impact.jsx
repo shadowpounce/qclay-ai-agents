@@ -5,7 +5,7 @@ import tennisMobileVideo from '../../video/tennis-mob.mp4';
 
 const Impact = () => {
   return (
-    <section data-kf="0.65" className={css.impact}>
+    <section data-color='black' data-kf="0.65" className={css.impact}>
       <div className="container">
         <p className={css.impact__uptitle}>AI Technology</p>
         <h2 className={css.impact__title}>

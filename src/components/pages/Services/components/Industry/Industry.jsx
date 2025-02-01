@@ -32,7 +32,7 @@ const Industry = () => {
   };
 
   return (
-    <section className={css.industry}>
+    <section data-color='black' className={css.industry}>
       <div className="container">
         <p className={css.industry__uptitle}>Applications</p>
         <h2 className={css.industry__title}>
