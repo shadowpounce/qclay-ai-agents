@@ -60,6 +60,11 @@
   transition-duration: 750ms;
   cursor: pointer;
 
+  @media (min-width: 1001px) {
+    min-height: 70vh;
+    height: 70vh;
+  }
+
   &:hover {
     background-color: #000000;
     color: var(--white-text-color);

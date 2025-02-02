@@ -88,6 +88,11 @@
   margin-left: auto;
   text-align: left !important;
 
+  @media (min-width: 1000px) {
+    scale: 0.85;
+    transform-origin: top right;
+  }
+
   @media screen and (max-width: 1123px) {
     width: 100%;
     padding-bottom: 300px;

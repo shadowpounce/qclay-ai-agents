@@ -9,12 +9,11 @@ import axios from 'axios';
 const TELEGRAM_BOT_TOKEN = '8090435868:AAEr7FxQm0g5jxYR0KNXtEGSup4hrDKYz5o';
 const TELEGRAM_CHAT_ID = '-4661685507';
 
-function sendMessage(text) {
-  return axios.post(
-    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?parse_mode=HTML&chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(
-      text
-    )}`
-  );
+function validateEmail(email) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    return true;
+  }
+  return false;
 }
 
 const borderAnimation = {
@@ -88,8 +87,48 @@ const Contact = () => {
     desc: '',
   });
 
+  function sendMessage(text) {
+    try {
+      if (!data.name && !data.desc && !data.email) {
+        alert('Please enter the empty fields');
+        return;
+      }
+
+      if (!data.desc) {
+        alert('Please enter the empty fields');
+      }
+
+      if (!data.name) {
+        alert('Please enter the empty fields');
+      }
+
+      if (!data.email) {
+        alert('Please enter your email');
+
+        return;
+      }
+
+      if (!validateEmail(data.email)) {
+        alert('Please enter a valid email');
+
+        return;
+      }
+    } catch (error) {}
+
+    return axios.post(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?parse_mode=HTML&chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(
+        text
+      )}`
+    );
+  }
+
   return (
-    <section data-color='black' data-kf="0.6" id="contact-us" className={css.contact}>
+    <section
+      data-color="black"
+      data-kf="0.6"
+      id="contact-us"
+      className={css.contact}
+    >
       <div className="container">
         <motion.h2
           initial="hidden"
