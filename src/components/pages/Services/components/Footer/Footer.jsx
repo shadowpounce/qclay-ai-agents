@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
           <div class="badge-rating-card">
             <div class="badge-rating-item">
-              <a href="https://clutch.co/profile/simform" target="_blank">
+              <a href="https://clutch.co/profile/qclay-ai#highlights" target="_blank">
                 <img
                   loading="lazy"
                   src={clutchImage}
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
             <div class="badge-rating-item">
               <a
-                href="https://www.g2.com/products/simform/reviews"
+                href="https://www.g2.com/products/qclay-ai/reviews?qs=pros-and-cons"
                 target="_blank"
               >
                 <img
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <div class="badge-rating-item">
               <a
-                href="https://www.g2.com/products/simform/reviews"
+                href="https://www.trustpilot.com/review/qclay.ai"
                 target="_blank"
               >
                 <img
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <div class="badge-rating-item">
               <a
-                href="https://www.g2.com/products/simform/reviews"
+                href="https://www.goodfirms.co/company/qclay-ai"
                 target="_blank"
               >
                 <img
