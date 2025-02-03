@@ -29,11 +29,12 @@ p {
     transform-origin: top center;
     max-width: 120%;
     width: 120%;
-    translate: -10% 0;
+    translate: -8.25% 0;
   }
 
   @media (min-width: 1001px) and (max-width: 1536px) {
     scale: 0.7;
+
     // max-width: 100% !important;
   }
 

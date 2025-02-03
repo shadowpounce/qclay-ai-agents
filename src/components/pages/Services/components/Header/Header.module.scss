@@ -117,6 +117,11 @@
   right: 1dvh;
   z-index: 111;
 
+  @media (min-width: 1000px) {
+    bottom: 7%;
+    right: 2%;
+  }
+
   @media (max-width: 1000px) {
     height: 58px;
     translate: 25% 0;
