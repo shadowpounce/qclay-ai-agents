@@ -34,7 +34,7 @@ p {
 
   @media (min-width: 1001px) and (max-width: 1536px) {
     scale: 0.7;
-    max-width: 100% !important;
+    // max-width: 100% !important;
   }
 
   @media screen and (max-width: 1124px) {
@@ -54,10 +54,6 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-
-  @media (min-width: 1001px) {
-    translate: 0 20%;
-  }
 }
 
 .word {
