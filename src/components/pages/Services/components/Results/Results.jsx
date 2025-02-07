@@ -39,13 +39,13 @@ const Results = () => {
     reset: true,
   });
 
-  useEffect(() => {
-    const videos = document.querySelectorAll('video');
+  // useEffect(() => {
+  //   const videos = document.querySelectorAll('video');
 
-    if (videos) {
-      videos.forEach(video => setTimeout(() => video.play(), 500));
-    }
-  }, []);
+  //   if (videos) {
+  //     videos.forEach(video => setTimeout(() => video.play(), 500));
+  //   }
+  // }, []);
 
   return (
     <section data-color="white" data-kf="0.75" className={css.results}>
@@ -67,28 +67,31 @@ const Results = () => {
               <p className={css.results__sum}>
                 270 <br /> employees
               </p>
-              <Media
-                query="(min-width:1123px)"
-                render={() => (
-                  <video
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                    className={css.results__laptop}
-                  >
-                    <source src={laptopVideo} />
-                  </video>
-                )}
-              />
+
+              <div
+                className={css.results__laptop}
+                dangerouslySetInnerHTML={{
+                  __html: `<video
+                        muted
+                        loop
+                        autoPlay
+                        playsInline
+                        controls=${false}
+                        
+                      >
+                        <source src=${laptopVideo} />
+                      </video>`,
+                }}
+              ></div>
+
               <p className={css.results__text}>
                 Our team of 270 developers, data scientists, administrators
                 managers
               </p>
             </div>
-            <video controls={false} muted loop className={css.results__laptop}>
+            {/* <video controls={false} muted loop className={css.results__laptop}>
               <source src={laptopVideo} />
-            </video>
+            </video> */}
           </div>
           <div className={css.results__last}>
             <div className={css.results__top}>
