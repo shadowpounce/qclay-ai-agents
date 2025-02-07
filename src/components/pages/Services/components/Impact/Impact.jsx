@@ -16,7 +16,7 @@ const Impact = () => {
         <div
           className={css.impact__video}
           dangerouslySetInnerHTML={{
-            __html: `<video muted loop autoPlay >
+            __html: `<video muted loop autoPlay playsInline controls=${false}>
               <source src=${
                 window.innerWidth > 767 ? tennisVideo : tennisMobileVideo
               } />
