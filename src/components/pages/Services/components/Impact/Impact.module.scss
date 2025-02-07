@@ -17,6 +17,14 @@
   }
 }
 
+video {
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+}
+
 .impact__uptitle {
   position: relative;
   z-index: 1;
