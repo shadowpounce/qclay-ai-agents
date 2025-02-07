@@ -79,20 +79,15 @@ const Results = () => {
                 managers
               </p>
             </div>
-            <Media
-              query="(max-width:1123px)"
-              render={() => (
-                <video
-                  controls={false}
-                  autoPlay
-                  muted
-                  loop
-                  className={css.results__laptop}
-                >
-                  <source src={laptopVideo} />
-                </video>
-              )}
-            />
+            <video
+              controls={false}
+              autoPlay
+              muted
+              loop
+              className={css.results__laptop}
+            >
+              <source src={laptopVideo} />
+            </video>
           </div>
           <div className={css.results__last}>
             <div className={css.results__top}>

@@ -22,7 +22,9 @@ video {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-
+  &::-webkit-media-controls {
+    display: none !important;
+  }
 }
 
 .impact__uptitle {
@@ -68,6 +70,12 @@ video {
   z-index: 1;
   border-top: 2.6px dashed #6b6b6b;
   margin-bottom: 255px;
+
+  display: none !important;
+
+  @media (max-width: 769px) {
+    display: block !important;
+  }
 }
 
 .impact__text {
@@ -85,6 +93,14 @@ video {
   @media screen and (max-width: 767px) {
     font-size: 16px;
     display: none;
+  }
+}
+
+.impact__video_mobile {
+  display: none !important;
+
+  @media screen and (max-width: 768px) {
+    display: block !important;
   }
 }
 

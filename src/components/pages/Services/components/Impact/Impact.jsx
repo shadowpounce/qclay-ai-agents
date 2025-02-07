@@ -2,10 +2,11 @@ import Media from 'react-media';
 import css from './Impact.module.scss';
 import tennisVideo from '../../video/tennis.mp4';
 import tennisMobileVideo from '../../video/tennis-mob.mp4';
+import clsx from 'clsx';
 
 const Impact = () => {
   return (
-    <section data-color='black' data-kf="0.65" className={css.impact}>
+    <section data-color="black" data-kf="0.65" className={css.impact}>
       <div className="container">
         <p className={css.impact__uptitle}>AI Technology</p>
         <h2 className={css.impact__title}>
@@ -15,23 +16,14 @@ const Impact = () => {
         <video autoPlay muted loop className={css.impact__video}>
           <source src={tennisVideo} />
         </video>
-        <Media
-          query="(max-width:767px)"
-          render={() => (
-            <>
-              <div className={css.impact__border}></div>
-              <video
-                playsInline
-                muted
-                autoPlay
-                loop
-                className={css.impact__video}
-              >
-                <source src={tennisMobileVideo} />
-              </video>
-            </>
-          )}
-        />
+
+        <>
+          <div className={css.impact__border}></div>
+          <video playsInline muted autoPlay loop className={clsx(css.impact__video,css.impact__video_mobile)}>
+            <source src={tennisMobileVideo} />
+          </video>
+        </>
+
         <p className={css.impact__text}>
           It is no longer feasible to resist the integration of AI in various
           industries, but rather to embrace and lead it in order to stay

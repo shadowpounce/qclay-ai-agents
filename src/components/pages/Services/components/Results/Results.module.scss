@@ -136,6 +136,8 @@
   user-select: none;
   pointer-events: none;
 
+  display: none;
+
   &::-webkit-media-controls {
     display: none !important;
   }
@@ -144,6 +146,7 @@
     max-width: 300px;
     left: 90%;
     top: 50px;
+    display: block;
 
     transform: translate(-90%, 0);
   }
