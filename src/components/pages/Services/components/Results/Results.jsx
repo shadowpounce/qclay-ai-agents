@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 import { InView } from 'react-intersection-observer';
 import Media from 'react-media';
@@ -38,6 +38,14 @@ const Results = () => {
     delay: 0,
     reset: true,
   });
+
+  useEffect(() => {
+    const videos = document.querySelectorAll('video');
+
+    if (videos) {
+      videos.forEach(video => setTimeout(() => video.play(), 500));
+    }
+  }, []);
 
   return (
     <section data-color="white" data-kf="0.75" className={css.results}>
