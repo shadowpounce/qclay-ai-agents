@@ -13,13 +13,18 @@ const Impact = () => {
           The impact of AI Agents on the world is far-reaching and profound,
           changing the way we live, work, and interact.
         </h2>
-        <video autoPlay muted loop className={css.impact__video}>
+        <video muted loop className={css.impact__video}>
           <source src={tennisVideo} />
         </video>
 
         <>
           <div className={css.impact__border}></div>
-          <video playsInline muted autoPlay loop className={clsx(css.impact__video,css.impact__video_mobile)}>
+          <video
+            playsInline
+            muted
+            loop
+            className={clsx(css.impact__video, css.impact__video_mobile)}
+          >
             <source src={tennisMobileVideo} />
           </video>
         </>

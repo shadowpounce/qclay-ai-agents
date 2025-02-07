@@ -63,7 +63,6 @@ const Results = () => {
                 query="(min-width:1123px)"
                 render={() => (
                   <video
-                    autoPlay
                     muted
                     loop
                     playsInline
@@ -79,13 +78,7 @@ const Results = () => {
                 managers
               </p>
             </div>
-            <video
-              controls={false}
-              autoPlay
-              muted
-              loop
-              className={css.results__laptop}
-            >
+            <video controls={false} muted loop className={css.results__laptop}>
               <source src={laptopVideo} />
             </video>
           </div>
